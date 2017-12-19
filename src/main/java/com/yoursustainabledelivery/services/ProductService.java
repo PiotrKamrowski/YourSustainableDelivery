@@ -6,9 +6,9 @@ public interface ProductService {
 
 
 
+    void addProductList();
 
-
-    Boolean productToAdd(Product productToAdd);
+    void productToAdd(long productId,long storeId, int count );
 
 
 

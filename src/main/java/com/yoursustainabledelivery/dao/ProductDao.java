@@ -4,8 +4,9 @@ import com.yoursustainabledelivery.model.Product;
 
 public interface ProductDao {
 
-    public void addProduct(Product p);
+    void addProduct(Product p);
 
+    void addListOfProducts(long storeId);
 
 
 

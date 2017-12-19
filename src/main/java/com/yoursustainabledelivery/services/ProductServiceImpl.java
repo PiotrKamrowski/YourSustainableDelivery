@@ -15,8 +15,18 @@ public class ProductServiceImpl implements ProductService{
     ProductDao productDao;
 
 
+
+
+
+
     @Override
-    public Boolean productToAdd(Product productToAdd) {
-        return null;
+    public void addProductList() {
+
+        productDao.addListOfProducts(1l);
+    }
+
+    @Override
+    public void productToAdd(long productId, long storeId, int count) {
+
     }
 }

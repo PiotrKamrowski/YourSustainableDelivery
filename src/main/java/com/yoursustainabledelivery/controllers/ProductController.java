@@ -22,15 +22,19 @@ public class ProductController {
     { return new ResponseEntity<String>(
             "REST API DZIAŁA!", HttpStatus.OK); }
 
+    @RequestMapping(value = "/testadd", method = RequestMethod.GET)
+    public ResponseEntity<String> requestTestadd()
+    {
+        productService.addProductList();
 
+        return new ResponseEntity<String>(
+            "REST API DZIAŁA!", HttpStatus.OK); }
 
 
     @RequestMapping(value = "/addProduct", method = RequestMethod.GET)
     public ResponseEntity<String> registerUser(@RequestParam String userName, @RequestParam String password){
 
-        Product product = new Product();
-
-      /*  productService.productToAdd()*/
+      productService.addProductList();
 
 
         return new ResponseEntity<String>( "OK", HttpStatus.OK); }

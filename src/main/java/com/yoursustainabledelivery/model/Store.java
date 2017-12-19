@@ -1,11 +1,13 @@
 package com.yoursustainabledelivery.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 
 import javax.persistence.*;
 
+@Data
 @Entity
-@Table(name = "store")
+@Table(name = "Store")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Store {
 
@@ -13,20 +15,16 @@ public class Store {
     @GeneratedValue
     private long id;
 
-
     private String name;
-
 
     private int area;
 
-
     private String street;
 
-
+    @Column(name = "snumber")
     private String number;
 
-    private String City;
-
+    private String city;
 
     private String postalCode;
 
