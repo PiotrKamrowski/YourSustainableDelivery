@@ -6,7 +6,7 @@ public interface ProductDao {
 
     public void addProduct(Product p);
 
-    public void autoAddRangeProduct();
+
 
 
 
