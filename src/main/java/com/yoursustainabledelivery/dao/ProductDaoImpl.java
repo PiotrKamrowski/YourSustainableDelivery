@@ -27,7 +27,7 @@ public class ProductDaoImpl extends AbstractDao implements ProductDao  {
     @Override
     public void addListOfProducts(long storeId) {
 
-       
+
 
     }
 
