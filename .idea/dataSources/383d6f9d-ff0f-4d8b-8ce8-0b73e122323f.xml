@@ -42,7 +42,8 @@
     </database>
     <schema id="14" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-12-19.18:05:32.499</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-12-19.19:29:31.316</IntrospectionTimestamp>
+      <IntrospectionStateNumber>196968</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -61,5 +62,232 @@
     <schema id="19" parent="2" name="information_schema">
       <ObjectId>12113</ObjectId>
     </schema>
+    <sequence id="20" parent="14" name="globalproductlist_id_item_seq">
+      <ObjectId>21226</ObjectId>
+      <StateNumber>196967</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="21" parent="14" name="store_id_seq">
+      <ObjectId>21218</ObjectId>
+      <StateNumber>196966</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="22" parent="14" name="globalproductlist">
+      <ObjectId>21228</ObjectId>
+      <StateNumber>196968</StateNumber>
+    </table>
+    <table id="23" parent="14" name="globalwerehouse">
+      <ObjectId>21241</ObjectId>
+      <StateNumber>196968</StateNumber>
+    </table>
+    <table id="24" parent="14" name="store">
+      <ObjectId>21220</ObjectId>
+      <StateNumber>196967</StateNumber>
+    </table>
+    <column id="25" parent="22" name="id_store">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>196967</StateNumber>
+    </column>
+    <column id="26" parent="22" name="id_item">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196967</StateNumber>
+      <SequenceName>globalproductlist_id_item_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;globalproductlist_id_item_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="27" parent="22" name="ean">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196967</StateNumber>
+    </column>
+    <column id="28" parent="22" name="name">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196967</StateNumber>
+    </column>
+    <column id="29" parent="22" name="purchasep">
+      <Position>5</Position>
+      <DataType>money|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196967</StateNumber>
+    </column>
+    <column id="30" parent="22" name="minsupply">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>196967</StateNumber>
+    </column>
+    <column id="31" parent="22" name="category">
+      <Position>7</Position>
+      <DataType>varchar(20)|0</DataType>
+      <StateNumber>196967</StateNumber>
+    </column>
+    <column id="32" parent="22" name="quanity">
+      <Position>8</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>196967</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="33" parent="22" name="inorders">
+      <Position>9</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>196967</StateNumber>
+    </column>
+    <column id="34" parent="22" name="inbox">
+      <Position>10</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196967</StateNumber>
+    </column>
+    <column id="35" parent="22" name="block">
+      <Position>11</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>196967</StateNumber>
+      <DefaultExpression>false</DefaultExpression>
+    </column>
+    <index id="36" parent="22" name="globalproductlist_id_item_key">
+      <ObjectId>21234</ObjectId>
+      <ColNames>id_item</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="37" parent="22" name="globalproductlist_id_item_key">
+      <ObjectId>21235</ObjectId>
+      <ColNames>id_item</ColNames>
+      <UnderlyingIndexName>globalproductlist_id_item_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="38" parent="22" name="globalproductlist_id_store_fkey">
+      <ObjectId>21236</ObjectId>
+      <ColNames>id_store</ColNames>
+      <RefTableId>21220</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>store</RefTableName>
+      <RefKeyName>store_id_key</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="39" parent="23" name="id_item">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>196968</StateNumber>
+    </column>
+    <column id="40" parent="23" name="quanity">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>196968</StateNumber>
+    </column>
+    <foreign-key id="41" parent="23" name="globalwerehouse_id_item_fkey">
+      <ObjectId>21244</ObjectId>
+      <ColNames>id_item</ColNames>
+      <RefTableId>21228</RefTableId>
+      <RefColPositions>2</RefColPositions>
+      <RefTableName>globalproductlist</RefTableName>
+      <RefKeyName>globalproductlist_id_item_key</RefKeyName>
+      <RefColNames>id_item</RefColNames>
+    </foreign-key>
+    <column id="42" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196966</StateNumber>
+      <SequenceName>store_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;store_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="43" parent="24" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196966</StateNumber>
+    </column>
+    <column id="44" parent="24" name="area">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>196966</StateNumber>
+    </column>
+    <column id="45" parent="24" name="city">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196966</StateNumber>
+    </column>
+    <column id="46" parent="24" name="street">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196966</StateNumber>
+    </column>
+    <column id="47" parent="24" name="snumber">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196966</StateNumber>
+    </column>
+    <column id="48" parent="24" name="postalcode">
+      <Position>7</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196966</StateNumber>
+    </column>
+    <column id="49" parent="24" name="accesories">
+      <Position>8</Position>
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196966</StateNumber>
+    </column>
+    <column id="50" parent="24" name="drinks">
+      <Position>9</Position>
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196966</StateNumber>
+    </column>
+    <column id="51" parent="24" name="foods">
+      <Position>10</Position>
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196966</StateNumber>
+    </column>
+    <column id="52" parent="24" name="bighouseholdgoods">
+      <Position>11</Position>
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196966</StateNumber>
+    </column>
+    <column id="53" parent="24" name="smallhouseholdgoods">
+      <Position>12</Position>
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196966</StateNumber>
+    </column>
+    <column id="54" parent="24" name="rtv">
+      <Position>13</Position>
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196966</StateNumber>
+    </column>
+    <column id="55" parent="24" name="smallelectronics">
+      <Position>14</Position>
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196966</StateNumber>
+    </column>
+    <column id="56" parent="24" name="computers">
+      <Position>15</Position>
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>196966</StateNumber>
+    </column>
+    <index id="57" parent="24" name="store_id_key">
+      <ObjectId>21224</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="58" parent="24" name="store_id_key">
+      <ObjectId>21225</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>store_id_key</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>

@@ -1,43 +1,49 @@
 package com.yoursustainabledelivery.model;
 
+import com.oracle.webservices.internal.api.databinding.DatabindingMode;
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity
-@Table(name = "GlobalStores")
+@Table(name = "globalproductlist")
 public class Product {
 
 
-    @Id
-    @Column
-    @GeneratedValue
-    private long id;
+    private long id_store;
 
-    @Column
+    @Id
+    @GeneratedValue
+    private long id_item;
+
+
+
     private long ean;
 
-    @Column
+
     private String name;
 
-    @Column
-    private int purchasePrice;
 
-    @Column
+    private double purchasePrice;
+
+
     private int minSupply;
 
-    @Column
+
     @Enumerated(EnumType.STRING)
     private Category category;
 
-    @Column
+
     private int quanity;
 
-    @Column
+
     private int inOrders;
 
-    @Column
+
     private int inBox;
 
-    @Column
+
     private boolean block;
 
 
