@@ -15,8 +15,8 @@ import java.util.Scanner;
 public class ProductDaoImpl extends AbstractDao implements ProductDao  {
 
 
-
-
-
-
+    @Override
+    public void addProduct(Product product) {
+        persist(product);
+    }
 }

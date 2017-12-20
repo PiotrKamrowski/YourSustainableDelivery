@@ -3,7 +3,9 @@ package com.yoursustainabledelivery.controllers;
 
 import com.yoursustainabledelivery.dao.GlobalWerehouseDao;
 import com.yoursustainabledelivery.dao.ProductInStoresDao;
+import com.yoursustainabledelivery.model.Category;
 import com.yoursustainabledelivery.model.GlobalWerehouse;
+import com.yoursustainabledelivery.model.Product;
 import com.yoursustainabledelivery.model.ProductInStore;
 import com.yoursustainabledelivery.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,9 +42,11 @@ public class ProductController {
 
 
     @RequestMapping(value = "/addProduct", method = RequestMethod.GET)
-    public ResponseEntity<String> registerUser(@RequestParam String userName, @RequestParam String password){
+    public ResponseEntity<String> registerUser(@RequestParam long ean, @RequestParam String name,@RequestParam double purchasePrise,@RequestParam String category,@RequestParam int inbox){
 
 
+
+       productService.addProduct(ean,name,purchasePrise,category,inbox);
 
 
         return new ResponseEntity<String>( "OK", HttpStatus.OK); }

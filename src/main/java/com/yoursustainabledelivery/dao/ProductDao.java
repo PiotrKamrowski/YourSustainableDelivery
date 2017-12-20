@@ -4,7 +4,7 @@ import com.yoursustainabledelivery.model.Product;
 
 public interface ProductDao {
 
-
+void addProduct(Product product);
 
 
 }
