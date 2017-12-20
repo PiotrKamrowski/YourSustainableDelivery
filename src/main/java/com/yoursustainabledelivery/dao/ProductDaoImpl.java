@@ -11,25 +11,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
 
-@Repository(value = "ProductDao")
+@Repository(value = "productDao")
 public class ProductDaoImpl extends AbstractDao implements ProductDao  {
 
 
 
-    @Override
-    public void addProduct(Product product) {
 
-        persist(product);
-
-
-    }
-
-    @Override
-    public void addListOfProducts(long storeId) {
-
-
-
-    }
 
 
 }

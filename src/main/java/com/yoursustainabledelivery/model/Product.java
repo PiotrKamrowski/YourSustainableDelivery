@@ -4,11 +4,14 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.oracle.webservices.internal.api.databinding.DatabindingMode;
 import lombok.Data;
 
+
+
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Data
 @Entity
-@Table(name = "Product")
+@Table(name = "product")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Product {
 
@@ -20,6 +23,7 @@ public class Product {
 
     private String name;
 
+    @Column(name = "purchasep")
     private double purchasePrice;
 
     @Enumerated(EnumType.STRING)

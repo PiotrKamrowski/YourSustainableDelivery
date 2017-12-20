@@ -4,4 +4,5 @@ public enum ProductsRange {
 
     BLOCK,NONE,FIRST,SECOND,THIRD;
 
+
 }

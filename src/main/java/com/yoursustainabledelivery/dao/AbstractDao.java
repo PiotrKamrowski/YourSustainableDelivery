@@ -1,5 +1,6 @@
 package com.yoursustainabledelivery.dao;
 
+import com.yoursustainabledelivery.model.Product;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,10 @@ public abstract class AbstractDao {
     public void delete(Object entity) {
         getSession().delete(entity);
     }
-}
+
+    public Object getObject(Class className,long id){
+        return getSession().load(className,id);}
+    }
 
 
 

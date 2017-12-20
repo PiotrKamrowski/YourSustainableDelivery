@@ -1,23 +1,29 @@
 package com.yoursustainabledelivery.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 
+import javax.persistence.*;
+
+import static javax.persistence.GenerationType.IDENTITY;
+@Data
 @Entity
 @Table(name = "orders")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Order {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = IDENTITY)
     private long id;
+
+    private long id_store;
 
     private long id_item;
 
     private int quanity;
 
+    @Transient
     private String date;
 
 

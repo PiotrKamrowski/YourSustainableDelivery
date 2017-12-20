@@ -4,8 +4,7 @@ package com.yoursustainabledelivery.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -13,7 +12,9 @@ import javax.persistence.Table;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class GlobalWerehouse {
 
+    @Id
     private long id_item;
+
     private int quanity;
 
 

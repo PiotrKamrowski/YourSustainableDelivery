@@ -1,8 +1,11 @@
 package com.yoursustainabledelivery.controllers;
 
 
-import com.yoursustainabledelivery.model.Product;
-import com.yoursustainabledelivery.services.ProductService;
+import com.yoursustainabledelivery.dao.GlobalWerehouseDao;
+import com.yoursustainabledelivery.dao.ProductInStoresDao;
+import com.yoursustainabledelivery.model.GlobalWerehouse;
+import com.yoursustainabledelivery.model.ProductInStore;
+import com.yoursustainabledelivery.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,15 +20,20 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public ResponseEntity<String> requestTest()
-    { return new ResponseEntity<String>(
+    {
+
+
+        return new ResponseEntity<String>(
             "REST API DZIAŁA!", HttpStatus.OK); }
 
     @RequestMapping(value = "/testadd", method = RequestMethod.GET)
     public ResponseEntity<String> requestTestadd()
     {
-        productService.addProductList();
+
+
 
         return new ResponseEntity<String>(
             "REST API DZIAŁA!", HttpStatus.OK); }
@@ -34,7 +42,7 @@ public class ProductController {
     @RequestMapping(value = "/addProduct", method = RequestMethod.GET)
     public ResponseEntity<String> registerUser(@RequestParam String userName, @RequestParam String password){
 
-      productService.addProductList();
+
 
 
         return new ResponseEntity<String>( "OK", HttpStatus.OK); }
