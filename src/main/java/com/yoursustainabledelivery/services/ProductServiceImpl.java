@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import sun.text.normalizer.UCharacter;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Service(value = "productService")
 @Transactional
@@ -19,11 +20,9 @@ public class ProductServiceImpl implements ProductService{
     ProductDao productDao;
 
 
+    @Override
+    public List<Object> getListOfProducts() {
 
-
-
-
-
-
-
+        return productDao.getList();
+    }
 }

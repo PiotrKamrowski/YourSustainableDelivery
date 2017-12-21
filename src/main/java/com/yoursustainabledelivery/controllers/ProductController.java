@@ -9,10 +9,13 @@ import com.yoursustainabledelivery.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class ProductController {
@@ -21,13 +24,18 @@ public class ProductController {
     private ProductService productService;
 
 
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
-    public ResponseEntity<String> requestTest()
-    {
 
 
-        return new ResponseEntity<String>(
-            "REST API DZIAŁA!", HttpStatus.OK); }
+
+    @RequestMapping(value = "/productsList",method = RequestMethod.GET)
+    public ResponseEntity<List<Object>> productList(){
+
+       List<Object> list = productService.getListOfProducts();
+
+       return new ResponseEntity<List<Object>>(list,HttpStatus.OK);
+    }
+
+
 
     @RequestMapping(value = "/testadd", method = RequestMethod.GET)
     public ResponseEntity<String> requestTestadd()
