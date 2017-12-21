@@ -8,4 +8,9 @@ public class ProductInStoresDaoImpl extends AbstractDao implements ProductInStor
 
 
 
+
+    @Override
+    public void addProductInStore(ProductInStore productInStore) {
+        persist(productInStore);
+    }
 }

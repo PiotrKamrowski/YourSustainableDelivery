@@ -16,5 +16,10 @@ public class ProductInStoresServiceImpl implements ProductInStoresService {
     ProductInStoresDao productInStoresDao;
 
 
+    @Override
+    public void addProductToStore(ProductInStore productInStore) {
 
+        productInStoresDao.addProductInStore(productInStore);
+
+    }
 }
