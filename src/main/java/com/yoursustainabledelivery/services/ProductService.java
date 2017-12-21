@@ -8,7 +8,7 @@ public interface ProductService {
 
 List<Object> getListOfProducts();
 
-
+void addProduct(long ean,String name,double purchasep,String category,int inbox);
 
 
 

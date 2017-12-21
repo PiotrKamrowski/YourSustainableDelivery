@@ -17,7 +17,14 @@ public class ProductDaoImpl extends AbstractDao implements ProductDao {
 
 
     @Override
+<<<<<<< HEAD
     public List<Object> getList() {
         return getListofObjects(Product.class);
     }
 }
+=======
+    public void addProduct(Product product) {
+        persist(product);
+    }
+}
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980

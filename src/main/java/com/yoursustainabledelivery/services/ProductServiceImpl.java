@@ -21,8 +21,30 @@ public class ProductServiceImpl implements ProductService{
 
 
     @Override
+<<<<<<< HEAD
     public List<Object> getListOfProducts() {
 
         return productDao.getList();
     }
+=======
+    public void addProduct(long ean,String name,double purchasep,String category,int inbox) {
+
+
+        Product product = new Product();
+
+
+
+
+        product.setName(name);
+        product.setEan(ean);
+        product.setPurchasePrice(purchasep);
+        product.setCategory(Category.valueOf(category));
+        product.setInBox(inbox);
+
+
+        productDao.addProduct(product);
+    }
+
+
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980
 }

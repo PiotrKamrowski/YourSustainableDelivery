@@ -7,9 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d99309e1-cac0-4ae0-ac49-b138b7aa4331" name="Default" comment="">
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/controllers/ProductController.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/controllers/ProductController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/AbstractDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/AbstractDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/ProductDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/ProductDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/ProductDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/ProductDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/ProductService.java" />
@@ -78,13 +80,19 @@
       <file leaf-file-name="ProductServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/ProductServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="272">
               <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+=======
+            <state relative-caret-position="379">
+              <caret line="37" column="37" lean-forward="false" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/controllers/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -93,6 +101,13 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="product" pinned="false" current-in-tab="true">
+        <entry file="das://table:/a7337e8e/383d6f9d-ff0f-4d8b-8ce8-0b73e122323f/YourSustainableDelivery.public.product">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980
             </state>
           </provider>
         </entry>
@@ -119,24 +134,35 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="ProductService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/ProductService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+=======
+      <file leaf-file-name="ProductDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/ProductDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#556#557#0" expanded="true" />
+                <element signature="e#588#589#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductInStoresService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/ProductInStoresService.java">
+      <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/controllers/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="209">
+              <caret line="48" column="70" lean-forward="false" selection-start-line="48" selection-start-column="70" selection-end-line="48" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,20 +182,46 @@
       <file leaf-file-name="GlobalWerehouseServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/GlobalWerehouseServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="289">
               <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+=======
+            <state relative-caret-position="136">
+              <caret line="8" column="79" lean-forward="false" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/AbstractDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="e#453#454#0" expanded="true" />
+                <element signature="e#497#498#0" expanded="true" />
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="GlobalWerehouseService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/GlobalWerehouseService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+=======
+      <file leaf-file-name="ProductDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/ProductDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980
               <folding />
             </state>
           </provider>
@@ -230,6 +282,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/model/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/model/ProductInStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/model/GlobalWerehouse.java" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/AbstractDao.java" />
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980
         <option value="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/GlobalWerehouseDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/GlobalWerehouseDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/OrderDao.java" />
@@ -246,7 +302,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/ProductInStoresServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/StoreService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/StoreServiceImpl.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/AbstractDao.java" />
+=======
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980
         <option value="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/ProductDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/ProductDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/ProductService.java" />
@@ -603,12 +662,16 @@
       <workItem from="1513670532971" duration="2880000" />
       <workItem from="1513700070197" duration="12959000" />
       <workItem from="1513716583476" duration="9466000" />
-      <workItem from="1513786895135" duration="10797000" />
+      <workItem from="1513786895135" duration="12531000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="37578000" />
+=======
+    <option name="totallyTimeSpent" value="37836000" />
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -634,6 +697,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30810812" sideWeight="0.4974293" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30810812" sideWeight="0.4974293" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -977,6 +1044,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/StoreDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -995,6 +1063,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/OrderService.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/ProductInStoresDao.java">
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
@@ -1103,20 +1174,37 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/GlobalWerehouseServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/AbstractDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="e#453#454#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/GlobalWerehouseService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/ProductDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+>>>>>>> 215e3ea6ead369c56500e0d4df1a47bd198bc980
           <folding />
         </state>
       </provider>
@@ -1138,6 +1226,50 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/dao/ProductDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding>
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="79" lean-forward="false" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/controllers/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="48" column="70" lean-forward="false" selection-start-line="48" selection-start-column="70" selection-end-line="48" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoursustainabledelivery/services/ProductServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="37" column="37" lean-forward="false" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/a7337e8e/383d6f9d-ff0f-4d8b-8ce8-0b73e122323f/YourSustainableDelivery.public.product">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
