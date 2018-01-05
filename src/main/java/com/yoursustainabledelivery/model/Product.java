@@ -31,7 +31,7 @@ public class Product {
 
     private int inBox;
 
-
+    private String description;
 
 
 

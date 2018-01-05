@@ -12,18 +12,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController(value = "/Rest/")
+
+@CrossOrigin(origins = "http://localhost:4200")
+@RestController(value = "/Rest")
 public class ProductController {
+
 
     @Autowired
     private ProductService productService;
+
 
 
 
@@ -36,6 +37,15 @@ public class ProductController {
 
        return new ResponseEntity<List<Object>>(list,HttpStatus.OK);
     }
+
+
+
+
+
+
+
+
+
 
 
 
