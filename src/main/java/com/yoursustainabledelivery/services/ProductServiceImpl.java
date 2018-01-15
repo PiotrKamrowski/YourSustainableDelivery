@@ -14,7 +14,7 @@ import java.util.List;
 
 @Service(value = "productService")
 @Transactional
-public class ProductServiceImpl implements ProductService{
+public class ProductServiceImpl implements ProductService {
 
     @Autowired
     ProductDao productDao;
@@ -25,12 +25,11 @@ public class ProductServiceImpl implements ProductService{
 
         return productDao.getList();
     }
-    public void addProduct(long ean,String name,double purchasep,String category,int inbox) {
+
+    public void addProduct(long ean, String name, double purchasep, String category, int inbox) {
 
 
         Product product = new Product();
-
-
 
 
         product.setName(name);
@@ -43,6 +42,25 @@ public class ProductServiceImpl implements ProductService{
         productDao.addProduct(product);
     }
 
+    @Override
+    public Object getProduct(Long id) {
+
+        productDao.getProduct(id);
 
 
+        return productDao.getProduct(id);
+
+
+    }
+
+    @Override
+    public List<Product> getListProductsCategory(String category) {
+
+        List list = productDao.getProductListByCategory(category);
+
+        List<Product> listProduct = (List<Product>)list;
+
+        return listProduct;
+
+    }
 }

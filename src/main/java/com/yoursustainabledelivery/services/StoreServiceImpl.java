@@ -16,4 +16,8 @@ public class StoreServiceImpl implements StoreService{
     StoreDao storeDao;
 
 
+    @Override
+    public Store getStore(Long id) {
+        return storeDao.getObject(id);
+    }
 }

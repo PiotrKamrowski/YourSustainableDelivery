@@ -7,5 +7,10 @@ import org.springframework.stereotype.Repository;
 public class StoreDaoImpl extends AbstractDao implements StoreDao{
 
 
-
+    @Override
+    public Store getObject(Long id) {
+        Object object = getObject(Store.class,id);
+        Store store = (Store)object;
+        return store;
+    }
 }

@@ -13,4 +13,7 @@ public interface ProductInStoresService {
     List<Object> getListOfProductsInStoreParam(Long id);
 
 
+
+    boolean isProductinStore(Long storeId,Long productId);
+
 }

@@ -31,36 +31,36 @@ public class Store {
     private String postalCode;
 
 
-    @Enumerated(EnumType.STRING)
-    private ProductsRange  accesories;
+
+    private int  accesories;
 
 
-    @Enumerated(EnumType.STRING)
-    private ProductsRange  drinks;
+
+    private int  drinks;
 
 
-    @Enumerated(EnumType.STRING)
-    private ProductsRange  foods;
+
+    private int  foods;
 
 
-    @Enumerated(EnumType.STRING)
-    private ProductsRange  bigHouseHoldGoods;
+
+    private int  bigHouseHoldGoods;
 
 
-    @Enumerated(EnumType.STRING)
-    private ProductsRange  smallHouseHoldGoods;
+
+    private int  smallHouseHoldGoods;
 
 
-    @Enumerated(EnumType.STRING)
-    private ProductsRange  rtv;
+
+    private int  rtv;
 
 
-    @Enumerated(EnumType.STRING)
-    private ProductsRange  smallElectronics;
+
+    private int  smallElectronics;
 
 
-    @Enumerated(EnumType.STRING)
-    private ProductsRange  computers;
+
+    private int  computers;
 
 
 }

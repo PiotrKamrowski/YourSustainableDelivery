@@ -1,0 +1,43 @@
+package com.yoursustainabledelivery.services;
+
+
+import com.yoursustainabledelivery.dao.UserDao;
+import com.yoursustainabledelivery.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+@Service(value = "userService")
+@Transactional
+public class UserServiceImpl implements UserService {
+
+
+    @Autowired
+    UserDao userDao;
+
+
+    @Override
+    public void addUser(User user) {
+        userDao.addUser(user);
+    }
+
+    @Override
+    public void updateUser(User user) {
+        userDao.update(user);
+    }
+
+    @Override
+    public User getUserById(String login) {
+
+       return userDao.getUser(login);
+    }
+
+    @Override
+    public List<User> getUsersStoresList() {
+        return userDao.getUsersList();
+    }
+
+
+}

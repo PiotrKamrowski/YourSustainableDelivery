@@ -3,10 +3,7 @@ package com.yoursustainabledelivery.controllers;
 
 import com.yoursustainabledelivery.dao.GlobalWerehouseDao;
 import com.yoursustainabledelivery.dao.ProductInStoresDao;
-import com.yoursustainabledelivery.model.Category;
-import com.yoursustainabledelivery.model.GlobalWerehouse;
-import com.yoursustainabledelivery.model.Product;
-import com.yoursustainabledelivery.model.ProductInStore;
+import com.yoursustainabledelivery.model.*;
 import com.yoursustainabledelivery.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,15 +15,19 @@ import java.util.List;
 
 
 @CrossOrigin(origins = "http://localhost:4200")
-@RestController(value = "/Rest")
+@RestController(value = "/products/")
+@RequestMapping(value = "products")
 public class ProductController {
 
 
     @Autowired
     private ProductService productService;
 
+    @Autowired
+    private OrderService orderService;
 
-
+    @Autowired
+    private ProductInStoresService productInStoresService;
 
 
 
@@ -40,8 +41,71 @@ public class ProductController {
 
 
 
+    @RequestMapping(value = "/productsList/{itemId}",method = RequestMethod.GET)
+    public ResponseEntity<Object> productInStore(@PathVariable("itemId") Long id) {
+
+       Object product = productService.getProduct(id);
+
+        return new ResponseEntity<Object>(product, HttpStatus.OK);
+
+    }
 
 
+
+    @RequestMapping(value = "/list/{category}",method = RequestMethod.GET)
+    public ResponseEntity<List<Product>> getListProductParams(@PathVariable("category") String category) {
+
+        List<Product> answer = productService.getListProductsCategory(category);
+
+        return new ResponseEntity<List<Product>>(answer, HttpStatus.OK);
+
+
+
+    }
+
+
+
+
+
+    @RequestMapping(value = "/addProductInStore",method = RequestMethod.POST)
+    public ResponseEntity<ProductInStore> addProductInStore(@RequestBody ProductInStore productInStore){
+
+
+
+    int inOrderByOrder = orderService.inOrderCorrecting(productInStore,1l);
+
+        System.out.println("!!!!!!!!!!!!!!!!!!!!"+inOrderByOrder);
+
+    productInStore.setInOrders(inOrderByOrder);
+
+        System.out.println(productInStore);
+
+
+         productInStoresService.addProductToStore(productInStore);
+
+        return new ResponseEntity<ProductInStore>(productInStore, HttpStatus.OK);
+    }
+
+
+
+
+
+    @RequestMapping(value = "/testadd23", method = RequestMethod.GET)
+    public ResponseEntity<String> requestTestadd2()
+    {
+        Order order = new Order();
+
+        order.setId_store(1);
+        order.setId_item(4375678765432l);
+        order.setQuanity(10);
+
+
+
+        orderService.addOrder(order);
+
+
+        return new ResponseEntity<String>(
+                "REST API DZIAŁA!", HttpStatus.OK); }
 
 
 
@@ -70,6 +134,15 @@ public class ProductController {
         return new ResponseEntity<String>( "OK", HttpStatus.OK); }
 
 
+        @RequestMapping(value = "/RTV",method = RequestMethod.GET)
+        public ResponseEntity<List<Product>> getListProductsRTV(){
+
+
+        List<Product> answer = productService.getListProductsCategory("RTV");
+
+
+        return new ResponseEntity<List<Product>>(answer,HttpStatus.OK);
+        }
 
 
 

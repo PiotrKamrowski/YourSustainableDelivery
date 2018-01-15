@@ -1,5 +1,6 @@
 package com.yoursustainabledelivery.services;
 
+import com.yoursustainabledelivery.model.Category;
 import com.yoursustainabledelivery.model.Product;
 
 import java.util.List;
@@ -10,6 +11,10 @@ List<Object> getListOfProducts();
 
 void addProduct(long ean,String name,double purchasep,String category,int inbox);
 
+Object getProduct (Long id);
+
+
+List<Product> getListProductsCategory(String category);
 
 
 }

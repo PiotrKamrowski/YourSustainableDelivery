@@ -22,8 +22,25 @@ public class ProductDaoImpl extends AbstractDao implements ProductDao {
         return getListofObjects(Product.class);
     }
 
+    @Override
+    public Object getProduct(Long id) {
+
+
+
+        return getObject(Product.class,id);
+    }
+
 
     public void addProduct(Product product) {
         persist(product);
+    }
+
+    @Override
+    public List<Object> getProductListByCategory(String category) {
+
+
+       return  getListOfProductsByCategory(category);
+
+
     }
 }

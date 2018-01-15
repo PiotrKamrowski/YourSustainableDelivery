@@ -6,6 +6,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 
+import java.util.Date;
+
 import static javax.persistence.GenerationType.IDENTITY;
 @Data
 @Entity
@@ -23,8 +25,10 @@ public class Order {
 
     private int quanity;
 
-    @Transient
-    private String date;
+    private boolean delivered;
+
+    @Column(name = "date_create",insertable = false,updatable = false)
+    private Date date;
 
 
 }
