@@ -31,19 +31,19 @@ public class StoreController {
     @RequestMapping(value = "/editRange/{StoreId}", method = RequestMethod.POST)
     public ResponseEntity<String[]> checkUser(@RequestBody String[] edited, @PathVariable("StoreId") Long storeID) {
 
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + edited[0]);
 
+        Store store = storeService.getStore(storeID);
 
-        int accesories = Integer.valueOf(edited[0]);
-        int drinks = Integer.valueOf(edited[1]);
-        int foods = Integer.valueOf(edited[2]);
-        int bigHouseHoldGoods = Integer.valueOf(edited[3]);
-        int smallHouseHoldGoods = Integer.valueOf(edited[4]);
-        int rtv = Integer.valueOf(edited[5]);
-        int smallElectronics = Integer.valueOf(edited[6]);
-        int computers = Integer.valueOf(edited[7]);
+        store.setAccesories(Integer.valueOf(edited[0]));
+        store.setDrinks(Integer.valueOf(edited[1]));
+        store.setFoods(Integer.valueOf(edited[2]));
+        store.setBigHouseHoldGoods(Integer.valueOf(edited[3]));
+        store.setSmallHouseHoldGoods(Integer.valueOf(edited[4]));
+        store.setRtv(Integer.valueOf(edited[5]));
+        store.setSmallElectronics(Integer.valueOf(edited[6]));
+        store.setComputers(Integer.valueOf(edited[7]));
 
-
+        storeService.updateStore(store);
 
 
         return new ResponseEntity<String[]>(edited, HttpStatus.OK);

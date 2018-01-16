@@ -10,7 +10,7 @@ public interface UserService {
 
     void addUser(User user);
 
-    void updateUser(User user);
+    void updateStoreUser(User user);
 
     User getUserById(String login);
 

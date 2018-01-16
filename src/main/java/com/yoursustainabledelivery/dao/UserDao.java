@@ -16,5 +16,5 @@ public interface UserDao {
     List<User> getUsersListTwoParams(String query, Object paramOne, Object paramTwo);
 
 
-    void update(Object object);
+    void updateUser(User user);
 }

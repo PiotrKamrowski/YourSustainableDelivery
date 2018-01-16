@@ -6,5 +6,7 @@ public interface StoreService {
 
 Store getStore(Long id);
 
+void updateStore(Store store);
+
 
 }

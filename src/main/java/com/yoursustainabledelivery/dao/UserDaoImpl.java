@@ -32,7 +32,7 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
     }
 
     @Override
-    public void update(Object object) {
-        update(object);
+    public void updateUser(User user) {
+        updateObject(user);
     }
 }

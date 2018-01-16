@@ -5,7 +5,10 @@ import com.yoursustainabledelivery.model.Store;
 public interface StoreDao {
 
 
-    Store getObject(Long id);
+
+    Store getStore(Long id);
+
+    void update(Store store);
 
 
 }

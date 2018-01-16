@@ -8,9 +8,15 @@ public class StoreDaoImpl extends AbstractDao implements StoreDao{
 
 
     @Override
-    public Store getObject(Long id) {
+    public Store getStore(Long id) {
         Object object = getObject(Store.class,id);
         Store store = (Store)object;
         return store;
+    }
+
+    @Override
+    public void update(Store store) {
+
+        updateObject(store);
     }
 }

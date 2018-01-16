@@ -48,7 +48,7 @@ public class UserController {
 
         user.setPermission(Permission.valueOf(buffer[0]));
 
-        userService.updateUser(user);
+        userService.updateStoreUser(user);
 
 
             return new ResponseEntity<Object>(permission, HttpStatus.OK);
