@@ -17,8 +17,8 @@ public class ProductInStoresDaoImpl extends AbstractDao implements ProductInStor
     }
 
     @Override
-    public List<Object> getProductsInStoreParam(Long id) {
-        return getListofObjectsParam(id);
+    public List<Object> getProductsInStoreParam(String query, Object param, String ident) {
+        return getListOfObjectsQoneParam(query,param,ident);
     }
 
 

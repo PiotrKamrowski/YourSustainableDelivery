@@ -9,7 +9,7 @@ public interface OrderDao {
 
     void addOrder(Order order);
 
-    List<Object> getOrderList(Long storeId, Long ProductInStorId);
+    List<Object> getOrderListByProduct(Long storeId, Long ProductInStorId);
 
     List<Object> getOrderList(Long storeId);
 

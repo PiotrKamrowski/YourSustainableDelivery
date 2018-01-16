@@ -27,26 +27,20 @@ public abstract class AbstractDao {
         getSession().delete(entity);
     }
 
+    public void update(Object entity) { getSession().update(entity);}
 
-    // problem z metoda get
+
 
     public Object getObject(Class className, long id) {
 
         Object object = new Object();
-/*
-        Query query = getSession().createQuery("FROM Product p WHERE p.ean=:id");
-
-        query.setParameter("id",id);
-
-        object = query.uniqueResult();*/
-
         object = getSession().get(className, id);
 
         return object;
     }
 
 
-    public Object getObjectByIdString(Class className, String id){
+    public Object getObject(Class className, String id){
 
         Object object = getSession().get(className,id);
 
@@ -54,58 +48,54 @@ public abstract class AbstractDao {
     }
 
 
-    public List<Object> getListOfProductsByCategory(String category) {
+    public List<Object> getListOfObjectsQoneParam(String query,Object param) {
 
-        Query query = getSession().createQuery("FROM Product p WHERE p.category =:category");
-        query.setParameter("category", Category.valueOf(category));
+        Query q = getSession().createQuery(query);
+        q.setParameter(String.valueOf(param), param);
 
-        return query.list();
+        return q.list();
 
     }
 
-    public List<Object> getListOfUsers() {
+    public List<Object> getListOfObjectsQtwoParams(String query, Object  paramOne, Object paramTwo) {
 
-        Query query = getSession().createQuery("FROM User u WHERE u.permission = :p1 or u.permission = :p2");
-        query.setParameter("p1", Permission.FULL);
-        query.setParameter("p2", Permission.USER);
-        return query.list();
+        Query q = getSession().createQuery(query);
+        q.setParameter(String.valueOf(paramOne), paramOne);
+        q.setParameter(String.valueOf(paramTwo), paramTwo);
+        return q.list();
+
+
     }
+
+    public List<Object> getListofObjectsQtwoParams(String query, Object  paramOne, Object paramTwo, String identOne, String identTwo) {
+
+
+
+        Query q = getSession().createQuery(query);
+        q.setParameter(identOne, paramOne);
+        q.setParameter(identTwo, paramTwo);
+        return q.list();
+    }
+
 
     public List<Object> getListofObjects(Class classa) {
         return getSession().createCriteria(classa).list();
     }
 
 
-    public List<Object> getListofObjectsParam(Long id) {
+    public List<Object> getListOfObjectsQoneParam(String query, Object param, String ident) {
 
-        Query query = getSession().createQuery("FROM ProductInStore p WHERE p.id_store =:id ");
-        query.setParameter("id", id);
+        Query q = getSession().createQuery(query);
+        q.setParameter(ident, param);
 
-        return query.list();
-    }
-
-    public List<Object> getListofObjectsOrder(Long idStore, Long idIteam) {
-
-        Query query = getSession().createQuery("FROM Order o WHERE o.id_item =:idItem and o.id_store =:idStore and o.delivered = false ");
-        query.setParameter("idItem", idIteam);
-        query.setParameter("idStore", idStore);
-
-        return query.list();
-    }
-
-    public List<Object> getListofObjectsOrderOneParam(Long idStore) {
-
-        Query query = getSession().createQuery("FROM Order o WHERE   o.id_store =:idStore");
-        query.setParameter("idStore", idStore);
-
-        return query.list();
+        return q.list();
     }
 
 
-    public void updateObject(Object object){
 
-        getSession().update(object);
-    }
+
+
+
 
 
 

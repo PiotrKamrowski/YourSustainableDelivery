@@ -71,14 +71,13 @@ public class UserController {
 
        String password = smallUser.getPassword();
 
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!"+smallUser);
 
-        System.out.println("!!!!!!!!@#@#@#@#"+user.getUserPassword());
 
        if(user.getUserPassword().equals(password)){
 
          smallUser.setCorrectlogin(true);
             smallUser.setStoreId(user.getIdStore());
+            smallUser.setPermission(user.getPermission());
        }else {
 
            smallUser.setCorrectlogin(false);

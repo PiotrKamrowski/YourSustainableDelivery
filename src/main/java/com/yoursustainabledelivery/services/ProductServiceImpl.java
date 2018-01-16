@@ -56,7 +56,11 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> getListProductsCategory(String category) {
 
-        List list = productDao.getProductListByCategory(category);
+        String query = "FROM Product p WHERE p.category =:category";
+
+        Category cat = Category.valueOf(category);
+
+        List list = productDao.getProductListByCategory(query,cat);
 
         List<Product> listProduct = (List<Product>)list;
 

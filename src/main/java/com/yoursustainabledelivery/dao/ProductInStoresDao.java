@@ -11,7 +11,7 @@ public interface ProductInStoresDao {
 
     List<Object> getList();
 
-    List<Object> getProductsInStoreParam(Long id);
+    List<Object> getProductsInStoreParam(String query, Object param, String ident);
 
 }
 

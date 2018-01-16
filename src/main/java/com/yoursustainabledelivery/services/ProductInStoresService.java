@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface ProductInStoresService {
 
-    List<Object> getListOfProductsInStores();
+
 
     void addProductToStore(ProductInStore productInStore);
 
-    List<Object> getListOfProductsInStoreParam(Long id);
+    List<Object> getListOfProductsInStore(Long id);
 
 
 

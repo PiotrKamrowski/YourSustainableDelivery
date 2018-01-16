@@ -23,10 +23,7 @@ public class ProductInStoresServiceImpl implements ProductInStoresService {
     ProductDao productDao;
 
 
-    @Override
-    public List<Object> getListOfProductsInStores() {
-        return productInStoresDao.getList();
-    }
+
 
     @Override
     public void addProductToStore(ProductInStore productInStore) {
@@ -36,15 +33,19 @@ public class ProductInStoresServiceImpl implements ProductInStoresService {
     }
 
     @Override
-    public List<Object> getListOfProductsInStoreParam(Long id) {
-        return productInStoresDao.getProductsInStoreParam(id);
+    public List<Object> getListOfProductsInStore(Long id) {
+
+        String query ="FROM ProductInStore p WHERE p.id_store =:id";
+
+        return productInStoresDao.getProductsInStoreParam(query,id,"id");
     }
 
     @Override
     public boolean isProductinStore(Long storeId, Long productId) {
 
 
-        List list = productInStoresDao.getProductsInStoreParam(storeId);
+
+        List list = getListOfProductsInStore(storeId);
         Product object = (Product)productDao.getProduct(productId);
 
         List<ProductInStore> productList =(List<ProductInStore>)list;

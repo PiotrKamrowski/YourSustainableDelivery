@@ -13,7 +13,7 @@ public interface UserDao {
 
     User getUser(String Login);
 
-    List<User> getUsersList();
+    List<User> getUsersListTwoParams(String query, Object paramOne, Object paramTwo);
 
 
     void update(Object object);

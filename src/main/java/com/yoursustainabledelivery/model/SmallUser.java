@@ -13,6 +13,8 @@ public class SmallUser {
 
     private Long storeId;
 
+    private Permission permission;
+
     @Transient
     private boolean correctlogin;
 }

@@ -2,6 +2,7 @@ package com.yoursustainabledelivery.services;
 
 
 import com.yoursustainabledelivery.dao.UserDao;
+import com.yoursustainabledelivery.model.Permission;
 import com.yoursustainabledelivery.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,7 +37,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> getUsersStoresList() {
-        return userDao.getUsersList();
+
+        String query = "FROM User u WHERE u.permission = :FULL or u.permission = :USER";
+
+
+
+        return userDao.getUsersListTwoParams(query, Permission.FULL, Permission.USER);
     }
 
 

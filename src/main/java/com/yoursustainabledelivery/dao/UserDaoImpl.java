@@ -16,20 +16,23 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
     @Override
     public User getUser(String login) {
 
-        Object object = getObjectByIdString(User.class,login);
+        Object object = getObject(User.class,login);
 
         return (User)object;
     }
 
     @Override
-    public List<User> getUsersList() {
-        List list = getListOfUsers();
+    public List<User> getUsersListTwoParams(String query, Object paramOne, Object paramTwo) {
+
+
+
+        List list = getListOfObjectsQtwoParams(query,paramOne,paramTwo);
 
         return (List<User>)list;
     }
 
     @Override
     public void update(Object object) {
-        updateObject(object);
+        update(object);
     }
 }

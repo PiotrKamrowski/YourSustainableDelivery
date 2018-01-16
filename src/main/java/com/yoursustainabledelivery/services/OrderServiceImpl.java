@@ -39,7 +39,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public int inOrderCorrecting(ProductInStore productInStore, Long StoreId) {
 
-       List list = orderDao.getOrderList(StoreId,productInStore.getId_item());
+       List list = orderDao.getOrderListByProduct(StoreId,productInStore.getId_item());
 
        List<Order> listOrder = (List<Order>)list;
 

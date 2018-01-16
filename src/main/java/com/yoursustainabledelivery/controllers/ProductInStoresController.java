@@ -21,7 +21,7 @@ public class ProductInStoresController {
     @RequestMapping(value = "/productInStore/{storeId}",method = RequestMethod.GET)
     public ResponseEntity<List<Object>> productInStore(@PathVariable("storeId") Long id){
 
-        List<Object> list = productInStoresService.getListOfProductsInStoreParam(id);
+        List<Object> list = productInStoresService.getListOfProductsInStore(id);
 
         return new ResponseEntity<List<Object>>(list, HttpStatus.OK);
     }

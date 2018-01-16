@@ -18,16 +18,22 @@ public class OrderDaoImpl extends AbstractDao implements OrderDao{
     }
 
     @Override
-    public List<Object> getOrderList(Long storeId, Long ProductInStorId) {
+    public List<Object> getOrderListByProduct(Long storeId, Long productInStoreID) {
 
-       return getListofObjectsOrder(storeId,ProductInStorId);
+        String query = "FROM Order o WHERE o.id_item =:idItem and o.id_store =:idStore and o.delivered = false ";
+
+
+       return getListofObjectsQtwoParams(query,storeId,productInStoreID,"idStore","idItem");
 
     }
 
     @Override
     public List<Object> getOrderList(Long storeId) {
 
-        return getListofObjectsOrderOneParam(storeId);
+        String query = "FROM Order o WHERE   o.id_store =:idStore";
+
+
+        return getListOfObjectsQoneParam(query,storeId,"idStore");
     }
 }
 

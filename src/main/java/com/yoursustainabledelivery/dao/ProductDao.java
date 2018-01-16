@@ -17,7 +17,7 @@ Object getProduct(Long id);
 
 void addProduct(Product product);
 
-List<Object> getProductListByCategory(String category);
+List<Object> getProductListByCategory(String query, Object param);
 
 
 
