@@ -19,12 +19,22 @@ public class ProductInStoresController {
     private ProductInStoresService productInStoresService;
 
     @RequestMapping(value = "/productInStore/{storeId}",method = RequestMethod.GET)
-    public ResponseEntity<List<Object>> productInStore(@PathVariable("storeId") Long id){
+    public ResponseEntity<List<Object>> productsInStore(@PathVariable("storeId") Long id){
 
         List<Object> list = productInStoresService.getListOfProductsInStore(id);
 
         return new ResponseEntity<List<Object>>(list, HttpStatus.OK);
     }
+
+
+    @RequestMapping(value = "/product/{storeId}/{itemId}",method = RequestMethod.GET)
+    public ResponseEntity<ProductInStore> productInStore(@PathVariable("storeId") Long id, @PathVariable("itemId") Long itemId){
+
+        ProductInStore productInStore = productInStoresService.getProductInStoreQuery(id,itemId);
+
+        return new ResponseEntity<ProductInStore>(productInStore, HttpStatus.OK);
+    }
+
 
 
 
@@ -41,23 +51,7 @@ public class ProductInStoresController {
 
 
 
-    @RequestMapping(value = "/addProduct2", method = RequestMethod.GET)
-    public ResponseEntity<String> registerUser(){
 
-
-        ProductInStore productInStore = new ProductInStore();
-
-        productInStore.setPrice(22);
-        productInStore.setId_store(1l);
-        productInStore.setMinSupply(1);
-        productInStore.setPrice(222);
-        productInStore.setId_item(3454323456043l);
-
-        productInStoresService.addProductToStore(productInStore);
-
-
-
-        return new ResponseEntity<String>( "OK", HttpStatus.OK); }
 
 
 }

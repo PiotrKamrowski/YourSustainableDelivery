@@ -17,6 +17,15 @@ public class ProductInStoresDaoImpl extends AbstractDao implements ProductInStor
     }
 
     @Override
+    public Object getProductInStore(Long storeId, Long itemId) {
+
+        String query = "FROM ProductInStore p WHERE p.id_store=:id_Store and p.id_item=:id_Item";
+
+
+        return getObjectQTwoParam(query,storeId,itemId,"id_Store","id_Item");
+    }
+
+    @Override
     public List<Object> getProductsInStoreParam(String query, Object param, String ident) {
         return getListOfObjectsQoneParam(query,param,ident);
     }

@@ -30,11 +30,17 @@ public class OrderServiceImpl implements OrderService {
 
         List list = orderDao.getOrderList(idStore);
 
-        List<Order> listOrder = (List<Order>)list;
 
-        return listOrder;
+
+        return list;
 
     }
+
+    @Override
+    public List<Order> getListOrdersByStoreAndIdItem(Long idStore, Long idItem) {
+
+        List list = orderDao.getOrderListByProduct(idStore,idItem);
+    return list;}
 
     @Override
     public int inOrderCorrecting(ProductInStore productInStore, Long StoreId) {

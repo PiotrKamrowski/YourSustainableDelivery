@@ -12,7 +12,7 @@ void addOrder(Order order);
 
 List<Order> getListOrdersByStore(Long idStore);
 
-
+List<Order> getListOrdersByStoreAndIdItem(Long idStore, Long idItem);
 
 
 

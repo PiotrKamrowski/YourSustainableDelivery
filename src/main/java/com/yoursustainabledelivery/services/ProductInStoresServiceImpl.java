@@ -41,6 +41,12 @@ public class ProductInStoresServiceImpl implements ProductInStoresService {
     }
 
     @Override
+    public ProductInStore getProductInStoreQuery(Long storeId, Long itemID) {
+
+        return (ProductInStore)productInStoresDao.getProductInStore(storeId,itemID);
+    }
+
+    @Override
     public boolean isProductinStore(Long storeId, Long productId) {
 
 

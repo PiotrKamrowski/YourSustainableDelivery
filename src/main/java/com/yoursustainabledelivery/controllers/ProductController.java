@@ -72,9 +72,9 @@ public class ProductController {
 
 
 
-    int inOrderByOrder = orderService.inOrderCorrecting(productInStore,1l);
+    int inOrderByOrder = orderService.inOrderCorrecting(productInStore,productInStore.getId_store());
 
-        System.out.println("!!!!!!!!!!!!!!!!!!!!"+inOrderByOrder);
+
 
     productInStore.setInOrders(inOrderByOrder);
 

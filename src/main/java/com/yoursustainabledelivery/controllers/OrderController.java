@@ -31,6 +31,21 @@ public class OrderController {
         return new ResponseEntity<List<Order>>(answer, HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/ordersList/{storeId}/{itemId}",method = RequestMethod.GET)
+    public ResponseEntity<List<Order>> OrdersListByStore(@PathVariable("storeId") Long storeID, @PathVariable("itemId") Long itemId){
+
+        List<Order> answer = orderService.getListOrdersByStoreAndIdItem(storeID,itemId);
+
+
+
+        return new ResponseEntity<List<Order>>(answer, HttpStatus.OK);
+    }
+
+
+
+
+
+
     @RequestMapping(value = "/addOrder",method = RequestMethod.POST)
     public ResponseEntity<Order> addOrder(@RequestBody Order order){
 

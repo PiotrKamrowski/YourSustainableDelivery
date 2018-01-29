@@ -30,6 +30,14 @@ public abstract class AbstractDao {
     public void updateObject(Object entity) { getSession().update(entity);}
 
 
+    public Object getObjectQTwoParam(String query, Object paramOne, Object paramTwo, String identOne, String identTwo){
+
+        Query q = getSession().createQuery(query);
+        q.setParameter(identOne, paramOne);
+        q.setParameter(identTwo, paramTwo);
+        return q.uniqueResult();
+
+    }
 
     public Object getObject(Class className, long id) {
 
