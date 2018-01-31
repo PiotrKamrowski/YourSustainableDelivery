@@ -19,11 +19,11 @@ public class ProductInStoresController {
     private ProductInStoresService productInStoresService;
 
     @RequestMapping(value = "/productInStore/{storeId}",method = RequestMethod.GET)
-    public ResponseEntity<List<Object>> productsInStore(@PathVariable("storeId") Long id){
+    public ResponseEntity<List<ProductInStore>> productsInStoreList(@PathVariable("storeId") Long id){
 
-        List<Object> list = productInStoresService.getListOfProductsInStore(id);
+        List<ProductInStore> list = productInStoresService.getListOfProductsInStore(id);
 
-        return new ResponseEntity<List<Object>>(list, HttpStatus.OK);
+        return new ResponseEntity<List<ProductInStore>>(list, HttpStatus.OK);
     }
 
 

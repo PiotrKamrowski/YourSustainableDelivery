@@ -16,5 +16,6 @@ Object getProduct (Long id);
 
 List<Product> getListProductsCategory(String category);
 
+List<Product> getListProductsByRange (int range, String category);
 
 }

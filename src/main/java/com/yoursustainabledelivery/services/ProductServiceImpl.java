@@ -67,4 +67,13 @@ public class ProductServiceImpl implements ProductService {
         return listProduct;
 
     }
+
+    @Override
+    public List<Product> getListProductsByRange(int range, String category) {
+
+        List list = productDao.getListOfProductsByRange(range,category);
+
+        return  (List<Product>)list;
+
+    }
 }

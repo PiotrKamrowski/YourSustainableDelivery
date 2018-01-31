@@ -30,7 +30,10 @@ public class ProductInStoresDaoImpl extends AbstractDao implements ProductInStor
         return getListOfObjectsQoneParam(query,param,ident);
     }
 
-
+    @Override
+    public void updateProductInStore(ProductInStore productInStore) {
+        updateObject(productInStore);
+    }
 
 
     @Override

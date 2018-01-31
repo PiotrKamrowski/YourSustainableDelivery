@@ -3,8 +3,10 @@ package com.yoursustainabledelivery.controllers;
 
 import com.yoursustainabledelivery.model.Order;
 import com.yoursustainabledelivery.model.Product;
+import com.yoursustainabledelivery.model.ProductInStore;
 import com.yoursustainabledelivery.services.OrderService;
 import com.yoursustainabledelivery.services.OrderServiceImpl;
+import com.yoursustainabledelivery.services.ProductInStoresService;
 import com.yoursustainabledelivery.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,7 +23,7 @@ public class OrderController {
 @Autowired
     OrderService orderService;
 @Autowired
-    ProductService productService;
+    ProductInStoresService productInStoresService;
 
     @RequestMapping(value = "/ordersList/{storeId}",method = RequestMethod.GET)
     public ResponseEntity<List<Order>> OrdersListByStore(@PathVariable("storeId") Long storeID){
@@ -49,14 +51,24 @@ public class OrderController {
     @RequestMapping(value = "/addOrder",method = RequestMethod.POST)
     public ResponseEntity<Order> addOrder(@RequestBody Order order){
 
-        Product product = (Product)productService.getProduct(order.getId_item());
-        int quanityOrder = order.getQuanity();
-        int inBox = product.getInBox();
-        while(quanityOrder%inBox != 0){
-            quanityOrder++;
-        }
 
-        order.setQuanity(quanityOrder);
+        if(productInStoresService.getProductInStoreQuery(order.getId_store(),order.getId_item()) != null) {
+            ProductInStore productInStore = productInStoresService.getProductInStoreQuery(order.getId_store(), order.getId_item());
+            int quanityOrder = order.getQuanity();
+            int inBox = productInStore.getProductDetail().getInBox();
+            while (quanityOrder % inBox != 0) {
+                quanityOrder++;
+            }
+
+            if (productInStore.getInOrders() > 0) {
+                productInStore.setInOrders(productInStore.getInOrders() + quanityOrder);
+            } else {
+                productInStore.setInOrders(quanityOrder);
+            }
+
+            order.setQuanity(quanityOrder);
+            productInStoresService.updateProductInStore(productInStore);
+        }
         orderService.addOrder(order);
 
         return new ResponseEntity<Order>(order, HttpStatus.OK);

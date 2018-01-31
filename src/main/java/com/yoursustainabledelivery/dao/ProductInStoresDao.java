@@ -15,5 +15,6 @@ public interface ProductInStoresDao {
 
     List<Object> getProductsInStoreParam(String query, Object param, String ident);
 
+    void updateProductInStore(ProductInStore productInStore);
 }
 

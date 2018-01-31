@@ -1,5 +1,6 @@
 package com.yoursustainabledelivery.dao;
 
+import com.yoursustainabledelivery.model.Category;
 import com.yoursustainabledelivery.model.Product;
 import org.springframework.stereotype.Repository;
 
@@ -13,6 +14,16 @@ public class ProductDaoImpl extends AbstractDao implements ProductDao {
 
     public List<Object> getList() {
         return getListofObjects(Product.class);
+    }
+
+    @Override
+    public List<Object> getListOfProductsByRange(int rage,String category) {
+
+        String query = "From Product p where p.range =:range and p.category =:category";
+
+        return getListofObjectsQtwoParams(query,rage,Category.valueOf(category),"range","category");
+
+
     }
 
     @Override

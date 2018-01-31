@@ -11,6 +11,8 @@ public interface ProductDao {
 List<Object> getList();
 
 
+List<Object> getListOfProductsByRange(int rage,String Category);
+
 
 Object getProduct(Long id);
 

@@ -10,11 +10,12 @@ public interface ProductInStoresService {
 
     void addProductToStore(ProductInStore productInStore);
 
-    List<Object> getListOfProductsInStore(Long id);
+    List<ProductInStore> getListOfProductsInStore(Long id);
 
     ProductInStore getProductInStoreQuery(Long storeId, Long itemID);
 
 
     boolean isProductinStore(Long storeId,Long productId);
 
+    void updateProductInStore(ProductInStore productInStore);
 }

@@ -33,11 +33,13 @@ public class ProductInStoresServiceImpl implements ProductInStoresService {
     }
 
     @Override
-    public List<Object> getListOfProductsInStore(Long id) {
+    public List<ProductInStore> getListOfProductsInStore(Long id) {
 
         String query ="FROM ProductInStore p WHERE p.id_store =:id";
 
-        return productInStoresDao.getProductsInStoreParam(query,id,"id");
+        List list =  productInStoresDao.getProductsInStoreParam(query,id,"id");
+
+        return (List<ProductInStore>)list;
     }
 
     @Override
@@ -72,5 +74,10 @@ public class ProductInStoresServiceImpl implements ProductInStoresService {
         return false;
 
 
+    }
+
+    @Override
+    public void updateProductInStore(ProductInStore productInStore) {
+        productInStoresDao.updateProductInStore(productInStore);
     }
 }
