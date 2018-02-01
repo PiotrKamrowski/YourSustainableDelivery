@@ -27,6 +27,8 @@ public class Order {
 
     private boolean delivered;
 
+    private String created;
+
     @Column(name = "date_create",insertable = false,updatable = false)
     private Date date;
 

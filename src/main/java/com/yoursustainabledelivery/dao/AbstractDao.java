@@ -56,14 +56,8 @@ public abstract class AbstractDao {
     }
 
 
-    public List<Object> getListOfObjectsQoneParam(String query,Object param) {
 
-        Query q = getSession().createQuery(query);
-        q.setParameter(String.valueOf(param), param);
 
-        return q.list();
-
-    }
 
     public List<Object> getListOfObjectsQtwoParams(String query, Object  paramOne, Object paramTwo) {
 
@@ -85,6 +79,18 @@ public abstract class AbstractDao {
         return q.list();
     }
 
+    public List<Object> getListofObjectsQthreeParams(String query, Object paramOne, Object paramTwo, Object paramThree, String identOne,String identTwo,String identThree){
+
+        Query q = getSession().createQuery(query);
+        q.setParameter(identOne,paramOne);
+        q.setParameter(identTwo,paramTwo);
+        q.setParameter(identThree,paramThree);
+
+        return  q.list();
+
+
+    }
+
 
     public List<Object> getListofObjects(Class classa) {
         return getSession().createCriteria(classa).list();
@@ -100,7 +106,15 @@ public abstract class AbstractDao {
     }
 
 
+    void updateObjectQthreeParam(String query, Object paramOne, Object paramTwo, Object paramThree, String identOne,String identTwo,String identThree){
 
+        Query q = getSession().createQuery(query);
+        q.setParameter(identOne,paramOne);
+        q.setParameter(identTwo,paramTwo);
+        q.setParameter(identThree,paramThree);
+        q.executeUpdate();
+
+    }
 
 
 

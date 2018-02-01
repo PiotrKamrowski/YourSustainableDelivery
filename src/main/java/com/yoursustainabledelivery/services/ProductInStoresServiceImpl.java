@@ -80,4 +80,11 @@ public class ProductInStoresServiceImpl implements ProductInStoresService {
     public void updateProductInStore(ProductInStore productInStore) {
         productInStoresDao.updateProductInStore(productInStore);
     }
+
+    @Override
+    public void updateProductInStoreBlock(Long idStore) {
+
+        productInStoresDao.updateProductInStoreByStoreId(idStore);
+
+    }
 }

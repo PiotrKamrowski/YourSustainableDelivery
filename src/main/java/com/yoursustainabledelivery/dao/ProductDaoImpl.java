@@ -43,7 +43,9 @@ public class ProductDaoImpl extends AbstractDao implements ProductDao {
     public List<Object> getProductListByCategory(String query ,Object param) {
 
 
-       return  getListOfObjectsQoneParam(query, param);
+        String ident = "category";
+
+       return  getListOfObjectsQoneParam(query, param,ident);
 
 
     }

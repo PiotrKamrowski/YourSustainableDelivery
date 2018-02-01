@@ -35,6 +35,17 @@ public class ProductInStoresDaoImpl extends AbstractDao implements ProductInStor
         updateObject(productInStore);
     }
 
+    @Override
+    public void updateProductInStoreByStoreId(Long storeId) {
+
+        String query = "UPDATE ProductInStore p set p.block =:block, p.minSupply=:minSupply WHERE p.id_store=:idStore";
+
+       updateObjectQthreeParam(query,true,0,storeId,"block","minSupply","idStore");
+
+    }
+
+
+
 
     @Override
     public void addProductInStore(ProductInStore productInStore) {

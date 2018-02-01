@@ -18,4 +18,6 @@ public interface ProductInStoresService {
     boolean isProductinStore(Long storeId,Long productId);
 
     void updateProductInStore(ProductInStore productInStore);
+
+    void updateProductInStoreBlock(Long idStore);
 }
